@@ -27,3 +27,5 @@ The approach was to find the index of the middle of the array, slice the array a
 
 ## Solution
 ![Solution](/assets/array-shift.png)
+
+[Code Solution](https://github.com/python-401d13/python-data-structures-and-algorithms/pull/2)
