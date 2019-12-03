@@ -23,4 +23,7 @@ Define a function which takes an array and an element and returns the same array
 Define a function which takes an array and an element and returns the same array with the element inserted at the middle.
 
 ## Approach & Efficiency
+The approach was to find the index of the middle of the array, slice the array around the middle index, the concatenate a new array with the new element between the left and right slice of the array.
+
+## Solution
 ![Solution](/assets/array-shift.png)
