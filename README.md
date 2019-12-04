@@ -46,4 +46,4 @@ Without enough time to write through the O(log N) binary search the written solu
 ![Binary Search Iteration Whiteboard - 02](/assets/array_binary_search/04)
 ![Binary Search Iteration Whiteboard - 03](/assets/array_binary_search/05)
 
-[Code Solution](https://github.com/python-401d13/python-data-structures-and-algorithms/pull/2)
+[Code Solution](https://github.com/python-401d13/python-data-structures-and-algorithms/pull/3)
