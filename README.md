@@ -4,6 +4,7 @@
 * Reverse an Array
 * Array Shift
 * Array Binary Search
+* Singly Linked List
 
 # Reverse an Array
 
@@ -47,3 +48,14 @@ Without enough time to write through the O(log N) binary search the written solu
 ![Binary Search Iteration Whiteboard - 03](/assets/array_binary_search/05)
 
 [Code Solution](https://github.com/python-401d13/python-data-structures-and-algorithms/pull/3)
+
+# Singly Linked List
+
+## Challenge
+By TDD write a Linked List data structure with insert and includes methods, and a method for seeing all values in the linked list. Write the Linked List and related Nodes in Python classes. Methods should follow the Single Responsibility Principle.
+
+## Approach & Efficiency
+Linked Lists are good data structures for adding or removing values quickly from a grouping of values. The Big O time complexity of inserting a value into a linked list is O(1) because the same number of step are taken regardless of the size of the linked list. The Big O time complexity of checking if a linked list includes a value is O(n) because in the worst case of a value not being in the linked list all nodes of the linked list are walked through. Similarly, seeing a grouping of all values in the linked list together take Big O time complexity O(n) because every node in the linked list is checked.
+
+## API
+A coder using the linked list class data structure will be able to use insert and includes instance methods. The coder can also see all values of the linked list by checking the string state of a linked list class instance. The insert method of a linked list class instance adds a value to the head of the linked list, when walking the linked list afterwords the value will be the first seen. The includes method of a linked list class instance checks a linked list for a value, if the value is in the linked list the method will return True, otherwise False.
