@@ -55,6 +55,55 @@ def test_get_linked_list_values():
     assert actual == expected
 
 
+def test_linked_list_append():
+    linked_list = LinkedList()
+    value = 1
+    linked_list.insert(value)
+
+    value = 2
+    linked_list.append(value)
+    assert linked_list.head.next.value == value
+    assert linked_list.head.next.next == None
+
+    value = 3
+    linked_list.append(value)
+    assert linked_list.head.next.next.value == value
+    assert linked_list.head.next.next.next == None
+
+
+def test_linked_list_insert_before():
+    linked_list = LinkedList()
+    value = 1
+    linked_list.insert(value)
+
+    new_value = 2
+    linked_list.insert_before(value, new_value)
+    assert linked_list.head.value == new_value
+    assert linked_list.head.next.value == value
+
+    newer_value = 3
+    linked_list.insert_before(value, newer_value)
+    assert linked_list.head.next.value == newer_value
+    assert linked_list.head.next.next.value == value
+
+
+def test_linked_list_insert_after():
+    linked_list = LinkedList()
+    value = 1
+    linked_list.insert(value)
+
+    new_value = 2
+    linked_list.insert_after(value, new_value)
+    assert linked_list.head.next.value == new_value
+    assert linked_list.head.next.next == None
+
+    newer_value = 3
+    linked_list.insert_after(value, newer_value)
+    assert linked_list.head.next.value == newer_value
+    assert linked_list.head.next.next.value == new_value
+    assert linked_list.head.next.next.next == None
+
+
 # Failing tests
 
 
