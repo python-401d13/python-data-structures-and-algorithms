@@ -5,6 +5,7 @@
 * Array Shift
 * Array Binary Search
 * Singly Linked List
+* Singly Linked List Insertions
 
 # Reverse an Array
 
@@ -59,3 +60,14 @@ Linked Lists are good data structures for adding or removing values quickly from
 
 ## API
 A coder using the linked list class data structure will be able to use insert and includes instance methods. The coder can also see all values of the linked list by checking the string state of a linked list class instance. The insert method of a linked list class instance adds a value to the head of the linked list, when walking the linked list afterwords the value will be the first seen. The includes method of a linked list class instance checks a linked list for a value, if the value is in the linked list the method will return True, otherwise False.
+
+# Singly Linked List Insertions
+
+## Challenge
+By TDD write a singly linked list with an `append` method which adds a new value to the end of the linked list, an `insert_before` method which adds a value before another value, and an `insert_after` method which adds a value after another value.
+
+## Approach & Efficiency
+The `append` method has O(n) time as the singly linked list needs to be walked to the end to append a value. The `insert_before` method has O(n) time as the singly linked list may need to walk the whole linked list trying to find the old value to insert before. The `insert_after` method has O(n) time as the singly linked list may need to walk the whole linked list trying to find the old value to insert after.
+
+## API
+New methods to a LinkedList instance are `append` which appends a value at the end of a linked list, `insert_before` which inserts a new value before an old value and `insert_after` which inserts a new value after an old value.
