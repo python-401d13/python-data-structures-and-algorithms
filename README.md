@@ -71,3 +71,8 @@ The `append` method has O(n) time as the singly linked list needs to be walked t
 
 ## API
 New methods to a LinkedList instance are `append` which appends a value at the end of a linked list, `insert_before` which inserts a new value before an old value and `insert_after` which inserts a new value after an old value.
+
+## Solution
+![Linked List insertions Whiteboard - 01](/assets/ll-insertions/ll-insertions-00.png)
+![Linked List insertions Whiteboard - 02](/assets/ll-insertions/ll-insertions-01.png)
+![Linked List insertions Whiteboard - 03](/assets/ll-insertions/ll-insertions-02.png)
