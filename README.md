@@ -88,3 +88,9 @@ The `kth_from_end` method has Big O time complexity O(n) because finding the len
 
 ## API
 New methods to a LinkedList instance are `kth_from_end` which takes an integer k in the range [-l, l) where l is the length of the linked list.
+
+## Solution
+![Linked List kth from end whiteboard - 01](/assets/ll-kth-from-end/kth_from_end_00.png)
+![Linked List kth from end whiteboard - 02](/assets/ll-kth-from-end/kth_from_end_01.png)
+![Linked List kth from end whiteboard - 03](/assets/ll-kth-from-end/kth_from_end_02.png)
+![Linked List kth from end whiteboard - 04](/assets/ll-kth-from-end/kth_from_end_03.png)
