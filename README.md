@@ -6,6 +6,7 @@
 * Array Binary Search
 * Singly Linked List
 * Singly Linked List Insertions
+* Singly Linked List kth_from_end
 
 # Reverse an Array
 
@@ -76,3 +77,20 @@ New methods to a LinkedList instance are `append` which appends a value at the e
 ![Linked List insertions Whiteboard - 01](/assets/ll-insertions/ll-insertions-00.png)
 ![Linked List insertions Whiteboard - 02](/assets/ll-insertions/ll-insertions-01.png)
 ![Linked List insertions Whiteboard - 03](/assets/ll-insertions/ll-insertions-02.png)
+
+# Singly Linked List kth_from_end
+
+## Challenge
+By TDD write a sinly linked list with a `kth_from_end` method which gets the value of the node kth steps from the end of the linked list.
+
+## Approach & Efficiency
+The `kth_from_end` method has Big O time complexity O(n) because finding the length of the linked list takes O(n) time and walking the linked list to find the kth from the end node takes O(n) time too. The `kth_from_end` method Big O space complexity O(1) because no matter how many nodes are in the linked list the same number of variables of the method are made.
+
+## API
+New methods to a LinkedList instance are `kth_from_end` which takes an integer k in the range [-l, l) where l is the length of the linked list.
+
+## Solution
+![Linked List kth from end whiteboard - 01](/assets/ll-kth-from-end/kth_from_end_00.png)
+![Linked List kth from end whiteboard - 02](/assets/ll-kth-from-end/kth_from_end_01.png)
+![Linked List kth from end whiteboard - 03](/assets/ll-kth-from-end/kth_from_end_02.png)
+![Linked List kth from end whiteboard - 04](/assets/ll-kth-from-end/kth_from_end_03.png)
