@@ -1,5 +1,8 @@
+import importlib
 import pytest
 from linked_list import LinkedList, Node, RangeException
+
+importlib.import_module('ll_merge', package='ll_merge')
 
 # Fixtures
 
@@ -140,7 +143,6 @@ def test_kth_from_end_ll_middle(simple_ll):
     actual = simple_ll.kth_from_end(k)
     assert actual == expected
 
-
 # Failing tests
 
 
@@ -196,3 +198,16 @@ def test_kth_from_end_ll_size_1():
     expected = value
     actual = linked_list.kth_from_end(k)
     assert actual == expected
+
+
+def test_merge_list_empty_first_list():
+    """Test correct return of two linked lists being merged with empty first linked list."""
+
+    ll_one = LinkedList()
+    ll_two = LinkedList()
+    value = 1
+    ll_two.insert(value)
+
+    merged_ll = merge_lists(ll_one, ll_two)
+    assert merged_ll.head.value == 1
+    assert merged_ll.head.next == None
