@@ -1,8 +1,6 @@
-import importlib
 import pytest
-from linked_list import LinkedList, Node, RangeException
-
-importlib.import_module('ll_merge', package='ll_merge')
+from challenges.linked_list.linked_list import LinkedList, Node, RangeException
+from challenges.ll_merge.ll_merge import merge_lists
 
 # Fixtures
 
@@ -143,6 +141,66 @@ def test_kth_from_end_ll_middle(simple_ll):
     actual = simple_ll.kth_from_end(k)
     assert actual == expected
 
+
+def test_merge_lists_same_size():
+    """Merge in zipper two linked linked of same size."""
+
+    ll_one = LinkedList()
+    values = [2, 3, 5]
+    for value in values:
+        # 5, 3, 2
+        ll_one.insert(value)
+
+    ll_two = LinkedList()
+    values = [9, 6, 4]
+    for value in values:
+        # 4, 6, 9
+        ll_two.insert(value)
+
+    expected = '5, 4, 3, 6, 2, 9'
+    actual = str(merge_lists(ll_one, ll_two))
+    assert actual == expected
+
+
+def test_merge_lists_first_list_smaller_size():
+    """Merge in zipper two linked lists with first list smaller."""
+
+    ll_one = LinkedList()
+    values = [2, 3]
+    for value in values:
+        # 3, 2
+        ll_one.insert(value)
+
+    ll_two = LinkedList()
+    values = [9, 6, 4]
+    for value in values:
+        # 4, 6, 9
+        ll_two.insert(value)
+
+    expected = '3, 4, 2, 6, 9'
+    actual = str(merge_lists(ll_one, ll_two))
+    assert actual == expected
+
+
+def test_merge_lists_second_list_smaller_size():
+    """Merge in zipper two linked lists with second list smaller."""
+
+    ll_one = LinkedList()
+    values = [2, 3, 5]
+    for value in values:
+        # 5, 3, 2
+        ll_one.insert(value)
+
+    ll_two = LinkedList()
+    values = [6, 4]
+    for value in values:
+        # 4, 6
+        ll_two.insert(value)
+
+    expected = '5, 4, 3, 6, 2'
+    actual = str(merge_lists(ll_one, ll_two))
+    assert actual == expected
+
 # Failing tests
 
 
@@ -200,8 +258,8 @@ def test_kth_from_end_ll_size_1():
     assert actual == expected
 
 
-def test_merge_list_empty_first_list():
-    """Test correct return of two linked lists being merged with empty first linked list."""
+def test_merge_lists_empty_first_list():
+    """Two linked lists being merged with empty first linked list."""
 
     ll_one = LinkedList()
     ll_two = LinkedList()
@@ -211,3 +269,24 @@ def test_merge_list_empty_first_list():
     merged_ll = merge_lists(ll_one, ll_two)
     assert merged_ll.head.value == 1
     assert merged_ll.head.next == None
+
+def test_merge_lists_empty_second_list():
+    """Two linked lists being merged with empty second linked list."""
+
+    ll_one = LinkedList()
+    ll_two = LinkedList()
+    value = 1
+    ll_one.insert(value)
+
+    merged_ll = merge_lists(ll_one, ll_two)
+    assert merged_ll.head.value == 1
+    assert merged_ll.head.next == None
+
+def test_merge_lists_empty_lists():
+    """Two linked lists being merged with both empty."""
+
+    ll_one = LinkedList()
+    ll_two = LinkedList()
+
+    merged_ll = merge_lists(ll_one, ll_two)
+    assert merged_ll.head == None
