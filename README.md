@@ -7,6 +7,7 @@
 * Singly Linked List
 * Singly Linked List Insertions
 * Singly Linked List kth_from_end
+* Merge Linked Lists
 
 # Reverse an Array
 
@@ -94,3 +95,19 @@ New methods to a LinkedList instance are `kth_from_end` which takes an integer k
 ![Linked List kth from end whiteboard - 02](/assets/ll-kth-from-end/kth_from_end_01.png)
 ![Linked List kth from end whiteboard - 03](/assets/ll-kth-from-end/kth_from_end_02.png)
 ![Linked List kth from end whiteboard - 04](/assets/ll-kth-from-end/kth_from_end_03.png)
+
+# Merge Linked Lists
+
+## Challenge
+Write a function which takes two linked lists as parameters and returns the two linked lists merged as a zipper. For example, linked lists [2] -> [3] -> [5] and [4] -> [6] -> [7] becomes [2] -> [4] -> [3] -> [6] -> [5] -> [7]. Write the algorithm in Big O space complexity O(1).
+
+## Approach & Efficiency
+The Big O time complexity of the algorithm is O(n^2) for a singly linked list. The approach is to walk both linked lists until a null pointer then change pointer, walk both linked lists again but until a null pointer minus one step, then again until a null pointer minus two steps, and so on until no steps are taken. The algorithm also handled cases where one or both linked lists are empty.
+
+## API
+The way to test the code is through the pytest module of Python. The algorithm and tests are written in Python. The `merge_lists` function written is not an instance method of the LinkedList class so must be imported separately from the LinkedList class for use.
+
+## Solution
+![Merge Linked Lists - 01](/assets/ll-merge/ll_merge_01.png)
+![Merge Linked Lists - 02](/assets/ll-merge/ll_merge_02.png)
+![Merge Linked Lists - 03](/assets/ll-merge/ll_merge_03.png)
