@@ -80,6 +80,7 @@ def test_stack_pop_while_not_empty(stack, value):
     stack.push(value)
     node_value = stack.pop()
     assert value == node_value
+    assert stack.top == None
 
 
 def test_stack_peek_while_empty(stack):
