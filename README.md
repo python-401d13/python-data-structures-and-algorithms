@@ -8,6 +8,7 @@
 * Singly Linked List Insertions
 * Singly Linked List kth_from_end
 * Merge Linked Lists
+* Stacks and Queues
 
 # Reverse an Array
 
@@ -111,3 +112,15 @@ The way to test the code is through the pytest module of Python. The algorithm a
 ![Merge Linked Lists - 01](/assets/ll-merge/ll_merge_01.png)
 ![Merge Linked Lists - 02](/assets/ll-merge/ll_merge_02.png)
 ![Merge Linked Lists - 03](/assets/ll-merge/ll_merge_03.png)
+
+# Stacks and Queues
+Stacks are a "first in last out" data structure when storing data. Queues are a "first in first out" data strucutre when storing data.
+
+## Challenge
+Write methods to add, remove and see the head of a stack and a queue.
+
+## Approach & Efficiency
+In all cases adding, removing and seeing the head of a stack or a queue can be done in O(1).
+
+## API
+Python classes are used to model Stack and Queue data structures with methods. TDD was used to test the instance methods and the tests can be run with pytest to see the validity of the instance methods.
