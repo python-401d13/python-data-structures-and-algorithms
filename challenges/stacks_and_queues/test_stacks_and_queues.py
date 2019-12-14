@@ -82,6 +82,16 @@ def test_stack_pop_while_not_empty(stack, value):
     assert value == node_value
     assert stack.top == None
 
+@pytest.mark.parametrize("value_a,value_b", [("Python", "Language")])
+def test_stack_pop_until_empty(stack, value_a, value_b):
+    """Pop a stack until empty."""
+
+    stack.push(value_a)
+    stack.push(value_b)
+    stack.pop()
+    stack.pop()
+    assert stack.top == None
+
 
 def test_stack_peek_while_empty(stack):
     """Can't see the top value of a stack with no values."""
@@ -195,6 +205,16 @@ def test_queue_dequeue_with_two_nodes(queue, value_a, value_b):
     assert queue.rear.value == value_b
     assert queue.rear.next == None
 
+@pytest.mark.parametrize("value_a,value_b", [("Python", "Language")])
+def test_queue_dequeue_until_empty(queue, value_a, value_b):
+    """Remove from a queue until empty."""
+
+    queue.enqueue(value_a)
+    queue.enqueue(value_b)
+    queue.dequeue()
+    queue.dequeue()
+    assert queue.front == None
+    assert queue.rear == None
 
 def test_queue_peek_while_empty(queue):
     """An empty queue has no value."""
