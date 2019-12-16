@@ -10,7 +10,6 @@ black = "*"
 [packages]
 pytest = "*"
 pytest-watch = "*"
-importlib = "*"
 
 [requires]
 python_version = "3.7"
