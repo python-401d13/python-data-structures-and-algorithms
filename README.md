@@ -9,6 +9,7 @@
 * Singly Linked List kth_from_end
 * Merge Linked Lists
 * Stacks and Queues
+* Queues with Stacks
 
 # Reverse an Array
 
@@ -124,3 +125,18 @@ In all cases adding, removing and seeing the head of a stack or a queue can be d
 
 ## API
 Python classes are used to model Stack and Queue data structures with methods. TDD was used to test the instance methods and the tests can be run with pytest to see the validity of the instance methods.
+
+# Queues with Stacks
+Make a queue data structure interface made with two stack data structure instances.
+
+## Challenge
+Write queue interface methods enqueue and dequeue.
+
+## Approach & Efficiency
+To enqueue a value to the pseudo queue all values are popped into a second stack, the value is pushed to the top of the second stack and then all values are popped from the second stack back into the first stack. To dequeue a value from the pseudo queue the top of the first stack is popped off.
+
+## API
+The Pseudo Queue instance methods are enqueue which takes a value to add to the front of the queue and dequeue which removes a value from the front of the queue.
+
+## Solution
+![Queues with Stacks](/assets/queues_with_stacks.png)
