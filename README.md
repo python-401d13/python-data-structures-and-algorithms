@@ -10,6 +10,7 @@
 * Merge Linked Lists
 * Stacks and Queues
 * Queues with Stacks
+* First-in, First-out Animal Shelter
 
 # Reverse an Array
 
@@ -140,3 +141,19 @@ The Pseudo Queue instance methods are enqueue which takes a value to add to the 
 
 ## Solution
 ![Queues with Stacks](/assets/queues_with_stacks.png)
+
+# First-in, First-out Animal Shelter
+Write a first-in first-out AnimalShelter class which has Cats and Dogs.
+
+## Challenge
+Write queue interface methods enqueue and dequeue. Enqueue takes an Animal to enqueue and returns nothing. Dequeue takes an Animal preference to let go and returns the animal if in the shelter.
+
+## Approach & Efficiency
+The AnimalShelter class is implemented with two Stacks. Enqueuing to the AnimalShelter takes Big O time O(n) and Big O space O(1). Dequeing from the AnimalShelter takes Big O time O(n) and Big O space O(1).
+
+## API
+The AnimalShelter is a Queue data structure and so has instance methods enqueue and dequeue though peek is not included because the Stacks are used to peek.
+
+## Solution
+![First-in, First-out Animal Shelter - 01](/assets/fifo-animal-shelter/fifo-animal-shelter-01.png)
+![First-in, First-out Animal Shelter - 02](/assets/fifo-animal-shelter/fifo-animal-shelter-02.png)
