@@ -18,7 +18,7 @@ def test_not_empty(binary_search_tree):
     for value in values:
         binary_search_tree.add(value)
 
-    expected = ['fizz', 11, 'fizzbuzz', 17, 'fizz', 'buzz']
+    expected = ['Fizz', '11', 'FizzBuzz', '17', 'Fizz', 'Buzz']
     fizzbuzzed_tree = fizzbuzz_tree(binary_search_tree)
     actual = fizzbuzzed_tree.in_order(fizzbuzzed_tree._root)
     assert actual == expected

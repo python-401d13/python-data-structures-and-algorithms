@@ -30,10 +30,10 @@ def fizzbuzz(value):
     """Return the fizzbuzz of a value."""
 
     if value % 3 == 0 and value % 5 == 0:
-        return 'fizzbuzz'
+        return 'FizzBuzz'
     elif value % 3 == 0:
-        return 'fizz'
+        return 'Fizz'
     elif value % 5 == 0:
-        return 'buzz'
+        return 'Buzz'
     else:
-        return value
+        return str(value)
