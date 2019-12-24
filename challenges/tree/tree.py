@@ -13,10 +13,10 @@ class _Node():
 class BinaryTree():
     """Binary Tree data structure."""
 
-    def __init__(self):
+    def __init__(self, node=None):
         """Binary Tree constructor."""
 
-        self._root = None
+        self._root = node
 
     def pre_order(self, node, order_list=[]):
         """See a pre-order list of Binary Tree values."""

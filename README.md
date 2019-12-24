@@ -12,6 +12,7 @@
 * Queues with Stacks
 * First-in, First-out Animal Shelter
 * Trees
+* Fizz Buzz Tree
 
 # Reverse an Array
 
@@ -170,3 +171,18 @@ API methods of instances of a Binary Tree and a Binary Search Tree `pre-order`, 
 
 ## API
 The API instance methods for a Binary Tree and Binary Search Tree are `pre-order`, `in-order` and `post-order`. The API instance methods for a Binary Search Tree are `add` and `contains`
+
+# Fizz Buzz Tree
+Write a function fizzbuzz_tree which takes a tree and returns a new tree with values fizzbuzzed.
+
+## Challenge
+WWrite a function fizzbuzz_tree which takes a tree and returns a new tree with values fizzbuzzed.
+
+## Approach & Efficiency
+The approach used was to write a helper function `fizzbuzz_node` which takes a node and returns a fizzbuzzed node. Left and right nodes are apart of the returned node. The tree given to `fizzbuzz_tree` is made with nodes by the recursive function `fizzbuzz_node` and the return of the root node in the `fizzbuzz_tree` definition is used to make a new tree which is returned from the `fizzbuzz_tree` function.
+
+## API
+The user facing function is `fizzbuzz_tree`. The developer facing helper function `fizzbuzz_node` is used to fizzbuzz the values of the tree given to the `fizzbuzz_tree` function.
+
+## Solution
+![Fizz Buzz Tree](/assets/fizz-buzz-tree.png)
