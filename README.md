@@ -13,6 +13,7 @@
 * First-in, First-out Animal Shelter
 * Trees
 * Fizz Buzz Tree
+* Breadth First Search
 
 # Reverse an Array
 
@@ -186,3 +187,18 @@ The user facing function is `fizzbuzz_tree`. The developer facing helper functio
 
 ## Solution
 ![Fizz Buzz Tree](/assets/fizz-buzz-tree.png)
+
+# Breadth First Search
+
+## Challenge
+Write a method for a Binary Tree which returns a list of values in the tree in breadth-first order.
+
+## Approach & Efficiency
+The approach is use a Queue to enqueue nodes of a Binary Tree and for each node in the Queue add the node's value to a list which is to be returned. The approach taken has both time and space efficiency O(N).
+
+## API
+The new `breadth_first_search` method of the BinaryTree class can be used with no arguments to get a list of the tree's values in breadth-first order.
+
+## Solution
+![Breadth First Search - 01](/assets/breadth_first_search/breadth_first_search_01.png)
+![Breadth First Search - 02](/assets/breadth_first_search/breadth_first_search_02.png)

@@ -1,5 +1,6 @@
 import pytest
 from tree import BinarySearchTree, BinaryTree, _Node
+from challenges.stacks_and_queues.stacks_and_queues import Queue, EmptyQueueException
 
 
 def test_create_node():
@@ -117,6 +118,29 @@ def test_bst_not_contains(binary_search_tree):
 
     expected = False
     actual = binary_search_tree.contains(16)
+    assert actual == expected
+
+
+def test_breadth_first_search_empty(binary_tree):
+    """A list of all values of an empty Binary Tree instance should be an empty list"""
+
+    expected = []
+    actual = binary_tree.breadth_first_search()
+    assert actual == expected
+
+
+def test_breadth_first_search_not_empty(binary_tree):
+    """A list of values in breadth-first order of a Binary Tree instance"""
+
+    binary_tree._root = _Node(5)
+    binary_tree._root.left = _Node(3)
+    binary_tree._root.right = _Node(1)
+    binary_tree._root.left.left = _Node(8)
+    binary_tree._root.left.right = _Node(6)
+    binary_tree._root.right.right = _Node(4)
+
+    expected = [5, 3, 1, 8, 6, 4]
+    actual = binary_tree.breadth_first_search()
     assert actual == expected
 
 
