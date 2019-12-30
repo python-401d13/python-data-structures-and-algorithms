@@ -1,0 +1,39 @@
+Write a method which takes a Binary Tree and returns a list of the tree's values through breadth-first search
+
+        [5]
+    [3]_| |_[1]       ->   [5, 3, 1, 8, 6, 4]
+[8]_| |_[6]   |_[4]
+
+1. Assuming a non-empty tree add the root of the tree to a new queue
+2. While the queue isn't empty, dequeue the front of the queue
+3. Add the value of the node to a list
+4. If the node has a left node, enqueue the left node
+5. If the node has a right node, enqueue the right node
+6. Repeat from step (2.)
+7. When the queue is empty return the list
+
+def breadth_first_search(self):
+    value_list = []
+
+    if not self.root:
+        return value_list
+
+    queue = Queue()
+    queue.enqueue(self.root)
+
+    try:
+        while queue.peek():
+            node = queue.dequeue()
+            value_list.append(node.value)
+
+            if node.left:
+                queue.enqueue(node.left)
+
+            if node.right:
+                queue.enqueue(node.right)
+    except EmptyQueueException:
+        return value_list
+
+- Big O
+    - time complexity: O(N)
+    - space complexity: O(N)

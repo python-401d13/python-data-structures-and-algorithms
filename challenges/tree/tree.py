@@ -1,3 +1,5 @@
+from challenges.stacks_and_queues.stacks_and_queues import Queue, EmptyQueueException
+
 
 class _Node():
     """Protected Node which make branches and leafs of a Binary Tree."""
@@ -56,6 +58,29 @@ class BinaryTree():
         order_list.append(node.value)
 
         return order_list
+
+    def breadth_first_search(self):
+        """Return a list of all values of a binary tree in breadth-first order"""
+
+        value_list = []
+
+        if not self._root:
+            return value_list
+
+        queue = Queue()
+        queue.enqueue(self._root)
+
+        while not isinstance(queue.peek(), EmptyQueueException):
+            node = queue.dequeue()
+            value_list.append(node.value)
+
+            if node.left:
+                queue.enqueue(node.left)
+
+            if node.right:
+                queue.enqueue(node.right)
+
+        return value_list
 
 
 class BinarySearchTree(BinaryTree):
