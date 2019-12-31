@@ -82,6 +82,25 @@ class BinaryTree():
 
         return value_list
 
+    def find_maximum_value(self, root):
+        """Return the maximum value of a tree of integers."""
+
+        if not root:
+            return None
+
+        max_value = root.value
+        left_value = self.find_maximum_value(root.left)
+        right_value = self.find_maximum_value(root.right)
+
+        if root.left:
+            if left_value > max_value:
+                max_value = left_value
+        if root.right:
+            if right_value > max_value:
+                max_value = right_value
+
+        return max_value
+
 
 class BinarySearchTree(BinaryTree):
     """Binary Search Tree (BST) data structure."""

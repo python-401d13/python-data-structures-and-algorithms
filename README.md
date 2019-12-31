@@ -14,6 +14,7 @@
 * Trees
 * Fizz Buzz Tree
 * Breadth First Search
+* Find Maximum Binary Tree
 
 # Reverse an Array
 
@@ -202,3 +203,17 @@ The new `breadth_first_search` method of the BinaryTree class can be used with n
 ## Solution
 ![Breadth First Search - 01](/assets/breadth_first_search/breadth_first_search_01.png)
 ![Breadth First Search - 02](/assets/breadth_first_search/breadth_first_search_02.png)
+
+# Find Maximum Binary Tree
+
+## Challenge
+Write an instance method `find_maximum_value` for a Binary Tree which finds the maximum value of a Binary Tree of numbers.
+
+## Approach & Efficiency
+The approach used is a depth-first search which takes a root node as an argument to the instance method call. The depth-first search is done in the pre-order way. Maximum values of depth searches are returns and evaluated for the current node, the left of the current node and the right of the current node. The Big O time efficiency is O(n) where n is the number of nodes in the tree. The Big O space efficiency is O(h) where h is the height of the tree and so the maximum height of the call-stack.
+
+## API
+The `find_maximum_value` instance method takes a root node as a parameter to find maximum values from by pre-order depth-first search.
+
+## Solution
+![Find Maximum Binary Tree](/assets/find-maximum-binary-tree.png)

@@ -144,6 +144,40 @@ def test_breadth_first_search_not_empty(binary_tree):
     assert actual == expected
 
 
+def test_find_maximum_value_empty(binary_tree):
+    """The maximum of an empty tree should be None."""
+
+    expected = None
+    actual = binary_tree.find_maximum_value(binary_tree._root)
+    assert actual == expected
+
+
+def test_find_maximum_value_single_node(binary_tree):
+    """The maximum of a single-node tree should be the value of the root."""
+
+    expected = 2
+    binary_tree._root = _Node(expected)
+
+    actual = binary_tree.find_maximum_value(binary_tree._root)
+    assert actual == expected
+
+
+def test_find_maximum_value_multi_node(binary_tree):
+    """The maximum of a multi-node tree should the maximum value of the tree."""
+
+    maximum = 19
+    binary_tree._root = _Node(2)
+    binary_tree._root.left = _Node(15)
+    binary_tree._root.right = _Node(11)
+    binary_tree._root.left.left = _Node(7)
+    binary_tree._root.left.right = _Node(maximum)
+    binary_tree._root.right.left = _Node(4)
+    binary_tree._root.right.right = _Node(3)
+
+    actual = binary_tree.find_maximum_value(binary_tree._root)
+    assert actual == maximum
+
+
 # Fixtures
 
 
