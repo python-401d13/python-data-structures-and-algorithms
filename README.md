@@ -15,6 +15,7 @@
 * Fizz Buzz Tree
 * Breadth First Search
 * Find Maximum Binary Tree
+* Hashtable
 
 # Reverse an Array
 
@@ -217,3 +218,15 @@ The `find_maximum_value` instance method takes a root node as a parameter to fin
 
 ## Solution
 ![Find Maximum Binary Tree](/assets/find-maximum-binary-tree.png)
+
+# Hashtable
+Hashtables are a common data structure which can read and write in time O(1). Hashtables are used to make programming dictionaries. Like a natural language dictionary, when a word has more than one definition the reader must step through each definition until finding the definition they're looking for or exit after reading all definitions.
+
+## Challenge
+Write a Hashtable class in Python. Test all methods of a Hashtable data structure. These methods are add, get, contains and hash.
+
+## Approach & Efficiency
+A hashtable without collisions in a bucket adds, gets and checks for containment in time O(1). A hashtable with collisions in a bucket does these methods in time relative to the number of key-value pairs in the bucket. Hashtables are said to have "amortized time O(1)".
+
+## API
+The API for a hashtable are methods add, get, contains and hash. Add is a method which takes a key-value pair and adds the pair at the correct index of the hashtable. Get returns a value given a key of a hashtable or raises an exception otherwise. Contains checks if a hashtable has a key. Finally hash takes a key and finds the index of the hashtable to keep the key-value pair.
