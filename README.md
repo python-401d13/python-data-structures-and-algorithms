@@ -239,7 +239,10 @@ Many pieces of writing whether they're phrases, sentences, paragraphs or otherwi
 Write a function named `repeated_words` which takes a lengthy string and returns the first repeated word from the string or null if there are no repeated words.
 
 ## Approach & Efficiency
-The function written takes time O(N) and space O(N) to run where N is the number of unique words in the lengthy string. Because the non-string value None is returned from the function when the lengthy string has no repeated words dictionary reads can happen in O(1) time keeping function run time to O(N). If all keys were read in the dictionary kept holding all words seen so far in the lengthy string the run time of the function would become O(N^2).
+The function written takes time O(N) and space O(N) to run where N is the number of unique words in the lengthy string. Because the non-string value None is returned from the function when the lengthy string has no repeated words, dictionary reads can happen in O(1) time keeping function run time to O(N). If all keys were read in the dictionary (kept holding all words seen so far in the lengthy string) the run time of the function would become O(N^2).
 
 ## API
 The only function written is `repeated_words` which takes a lengthy string to be checked for the first repeated word. The first repeated word is returned from the function or None if no repeated words are in the lenghty string. A known limitation of the function is plurals are seen as different words.
+
+## Solution
+![Repeated word whiteboard](/assets/repeated_word.png)
