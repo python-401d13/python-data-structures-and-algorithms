@@ -16,6 +16,7 @@
 * Breadth First Search
 * Find Maximum Binary Tree
 * Hashtable
+* Repeated Word
 
 # Reverse an Array
 
@@ -230,3 +231,18 @@ A hashtable without collisions in a bucket adds, gets and checks for containment
 
 ## API
 The API for a hashtable are methods add, get, contains and hash. Add is a method which takes a key-value pair and adds the pair at the correct index of the hashtable. Get returns a value given a key of a hashtable or raises an exception otherwise. Contains checks if a hashtable has a key. Finally hash takes a key and finds the index of the hashtable to keep the key-value pair.
+
+# Repeated Word
+Many pieces of writing whether they're phrases, sentences, paragraphs or otherwise have mnay words repeated. One of the most common words used in English is 'the'. Natural language often needs words repeated in writing to be readable.
+
+## Challenge
+Write a function named `repeated_words` which takes a lengthy string and returns the first repeated word from the string or null if there are no repeated words.
+
+## Approach & Efficiency
+The function written takes time O(N) and space O(N) to run where N is the number of unique words in the lengthy string. Because the non-string value None is returned from the function when the lengthy string has no repeated words, dictionary reads can happen in O(1) time keeping function run time to O(N). If all keys were read in the dictionary (kept holding all words seen so far in the lengthy string) the run time of the function would become O(N^2).
+
+## API
+The only function written is `repeated_words` which takes a lengthy string to be checked for the first repeated word. The first repeated word is returned from the function or None if no repeated words are in the lenghty string. A known limitation of the function is plurals are seen as different words.
+
+## Solution
+![Repeated word whiteboard](/assets/repeated_word.png)
