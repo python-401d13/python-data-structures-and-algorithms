@@ -17,6 +17,7 @@
 * Find Maximum Binary Tree
 * Hashtable
 * Repeated Word
+* Left Join
 
 # Reverse an Array
 
@@ -246,3 +247,18 @@ The only function written is `repeated_words` which takes a lengthy string to be
 
 ## Solution
 ![Repeated word whiteboard](/assets/repeated_word.png)
+
+# Left Join
+Merging two collections together is a common task. The union and intersection of two collections are common ways to look at to analyze the merge of two collections. In the field of software, a left join of two collections is a collection with all values from the left collection which includes the intersection of the left and right collections.
+
+## Challenge
+Write a function which takes two dictionaries, key-values pairs of words and synonyms and key-value pairs of words and antonyms. From the function return a new data structure which is the left join of the synonyms dictionary to the antonyms dictionary.
+
+## Approach & Efficiency
+The solution used is to create an empty dictionary at the start of the function which will be returned at the end of the function. Walk through the dictionary of synonyms adding keys to a list of values for all key-value pairs. For each key in the dictionary of synonyms also add the value of the key in the dictionary of antonyms or None otherwise. The solutions take time O(N) and space O(N) where N is the number of keys in the dictionary of synonyms.
+
+## API
+There's one function created for the solution which is `left_join`. The function takes two dictionaries as parameters. What's returned from the function is a new dictionary which is the left join of the first and second parameter dictionaries.
+
+## Solution
+![Left Join whiteboard](/assets/left-join.png)
