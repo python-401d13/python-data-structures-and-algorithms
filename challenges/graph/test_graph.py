@@ -75,6 +75,32 @@ def test_add_edge_with_weight(graph):
     assert actual == expected
 
 
+def test_get_nodes_empty(graph):
+    """
+    Get an empty collection of vertices when a graph has no vertices.
+    """
+
+    expected = set({})
+    actual = set(graph.get_nodes())
+
+    assert actual == expected
+
+
+def test_get_nodes(graph):
+    """
+    Get a collection of al vertices in a graph.
+    """
+
+    apple = graph.add_node('apple')
+    banana = graph.add_node('banana')
+    carrot = graph.add_node('carrot')
+
+    expected = set({apple, banana, carrot})
+    actual = set(graph.get_nodes())
+
+    assert actual == expected
+
+
 def test_get_nodes_no_neighbors(graph):
     """
     A graph vertex with no neighbors is shown as an empty collection.
@@ -88,7 +114,7 @@ def test_get_nodes_no_neighbors(graph):
     assert actual == expected
 
 
-def test_get_nodes(graph):
+def test_get_neighbors(graph):
     """
     Neighbors of a graph vertex are gotten.
     """

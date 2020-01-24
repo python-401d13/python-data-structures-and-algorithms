@@ -49,6 +49,17 @@ class Graph():
         self._adjacency_list[start_vertex].append((end_vertex, weight))
 
 
+    def get_nodes(self):
+        """
+        Get collection of all vertices in graph.
+
+        Out:
+        (list): Collection of all vertices in graph.
+        """
+
+        return self._adjacency_list.keys()
+
+
     def get_neighbors(self, start_vertex):
         """
         Get collection of neighbors for a vertex in graph.
