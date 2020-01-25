@@ -18,6 +18,7 @@
 * Hashtable
 * Repeated Word
 * Left Join
+* Graph
 
 # Reverse an Array
 
@@ -262,3 +263,15 @@ There's one function created for the solution which is `left_join`. The function
 
 ## Solution
 ![Left Join whiteboard](/assets/left-join.png)
+
+# Graph
+Graphs are a common data structure. They can be used to model networks of friends, airports or other hubs. The graph data structure can be used to imagine the web.
+
+## Challenge
+Write a Graph class in Python along with helper classes. Add methods `add_node`, `add_edge`, `get_nodes`, `get_neighbors` and `size` to the Graph class.
+
+## Approach & Efficiency
+A graph can be modeled similar to a hashtable with a dictionary, doing so makes an adjacency list. Each key of the adjacency list is a node in the graph. Neighbors of a node are kept in a collection mapped to by the key in the adjacency list.
+
+## API
+Classes added are `Graph` and `Vertex`. There are no methods of the `Vertex` class. Methods of the `Graph` class are `add_node`, `add_edge`, `get_nodes`, `get_neighbors` and `size`.
