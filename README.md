@@ -17,12 +17,9 @@
 * Find Maximum Binary Tree
 * Hashtable
 * Repeated Word
-<<<<<<< HEAD
 * Tree Intersection
-=======
 * Left Join
 * Graph
->>>>>>> f6ec1dc835fdc2ff4b24e2100c6f746275ed9a4a
 
 # Reverse an Array
 
