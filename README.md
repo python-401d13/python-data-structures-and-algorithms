@@ -21,6 +21,7 @@
 * Left Join
 * Graph
 * Breadth First Graph
+* Get Edge
 
 # Reverse an Array
 
@@ -307,3 +308,18 @@ The Graph class is extended with the BreadthFirstGraph class. The BreadthFirstGr
 
 ## Solution
 ![Breadth First Graph](/assets/breadth_first_graph.png)
+
+# Get Edge
+Walking graph is a common task. Seeing if a walk through a graph and the cost of the walk goes with walking a graph.
+
+## Challenege
+Write a function `get_edge` which takes in a graph and a list of values. The function should give out a boolean saying whether a walk between the values as nodes can happen and the cost of the walk. If the walk can't happen the cost is $0.
+
+## Approach & Efficiency
+The list of values taken into the function is a could-be list of vertex values. The first step is to get a list of nodes whose values are the values from the list taken into the function. From the list of nodes neighbors are checked to see if the walk can happen and what the cost of the walk is. The Big O time is O(N^2) and the Big O space is O(N) where N is the number of vertices in the graph and the number of values in the list taken into the function.
+
+## API
+The new function is `get_edge` whose parameters are a graph and a list of could-be graph vertex values. What's given out from the function is a boolean telling whether the walk between each list value taken into the function can happen in order and what the cost of the walk is. When the walk can't happen a false boolean along with $0 in a string is given out from the function.
+
+## Solution
+![Get Edge](/assets/get_edge.png)
