@@ -48,6 +48,7 @@ class Stack:
 
         return not self.top
 
+
 class Queue():
     """Queue which holds FIFO list of nodes."""
 
@@ -91,7 +92,7 @@ class Queue():
         """See the value at the front of the queue."""
 
         if self.is_empty():
-            return EmptyQueueException()
+            raise EmptyQueueException()
 
         return self.front.value
 

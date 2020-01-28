@@ -20,6 +20,7 @@
 * Tree Intersection
 * Left Join
 * Graph
+* Breadth First Graph
 
 # Reverse an Array
 
@@ -291,3 +292,18 @@ A graph can be modeled similar to a hashtable with a dictionary, doing so makes 
 
 ## API
 Classes added are `Graph` and `Vertex`. There are no methods of the `Vertex` class. Methods of the `Graph` class are `add_node`, `add_edge`, `get_nodes`, `get_neighbors` and `size`.
+
+# Breadth First Graph
+There are two common ways to walk a graph: breadth first and depth first. Walking a graph breadth first is similar to walking a tree breadth first. When working with a tree the root is often taken as where to walk from breadth first, when working with a graph a given node is taken as where to walk from breadth first.
+
+## Challenge
+As a whiteboard interview problem find a solution to walking a graph breadth first. Write tests for the solution too. Find the Big O time and space of walking a graph breadth first.
+
+## Apprach & Efficiency
+The approach taken to solving the problem is using a queue which holds onto the neighbors a current vertex. While the queue is not empty continue dequeueing vertices and checkings neighbors of the vertex. If a vertex is in a list of seen vertices don't add the vertex's neighbors to the vertices list and don't add the vertex to the vertices list, otherwise do both. The Big O time for breadth first search is O(N^2) and the Big O space is O(N).
+
+## API
+The Graph class is extended with the BreadthFirstGraph class. The BreadthFirstGraph has a new method named `breadth_first`. The methods takes in a vertex and gives out a list of vertices seen in a breadth first walk starting from the starting vertex.
+
+## Solution
+![Breadth First Graph](/assets/breadth_first_graph.png)
