@@ -22,6 +22,7 @@
 * Graph
 * Breadth First Graph
 * Get Edge
+* Depth First
 
 # Reverse an Array
 
@@ -323,3 +324,25 @@ The new function is `get_edge` whose parameters are a graph and a list of could-
 
 ## Solution
 ![Get Edge](/assets/get_edge.png)
+
+# Depth First
+Given a graph there are two common ways to walk through the graph. Depth first if one of these common walks. Given a starting vertex each path which can be walked starting from the starting vertex is walked. Each vertex seen is tracked and not recycled in a future walk.
+
+## Challenge
+Write a function which takes a graph as an adjacency list and a starting vertex. From the function return a collection of vertices in depth first pre-order from a walk of the graph starting at the starting vertex.
+
+## Approach & Efficiency
+The approach taken was to define two functions `depth_first` and `walk`. The `depth_first` function is the entrypoint where edge cases of the graph and starting vertex are handled. The starting empty collection of vertices in the graph is made here too. The `walk` function is used for the pre-order depth first walk of the graph starting from the starting vertex.
+
+| O | time | space |
+| --- | --- | --- |
+| depth_first | O(1) | O(1) |
+| walk | O(N) | O(N) |
+
+Where N is the number of vertices in the graph.
+
+## API
+New functions are `depth_first` which takes a graph and a vertex and a return a set of the graph vertices seen in depth first pre-order starting from the staring vertex. The other function is `walk` which takes a graph, a starting vertex and a set. There's no return from the `walk` function. The set is added to in-place through the pre-order depth first walk of the graph starting from the starting vertex.
+
+## Solution
+![Depth First](/assets/depth_first.png)
